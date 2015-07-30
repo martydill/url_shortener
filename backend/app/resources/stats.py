@@ -12,10 +12,10 @@ class StatsResource(Resource):
 
     hits = db.session.query(func.count(Hit.id)).filter_by(url_id = url_id).scalar()
 
-    referrers = db.session.query(func.coalesce(Hit.referrer, ''), func.count(Hit.referrer)) \
+    referrers = db.session.query(func.coalesce(Hit.referrer, ''), func.count()) \
                   .filter_by(url_id = url_id).group_by(Hit.referrer).all()
 
-    user_agents = db.session.query(func.coalesce(Hit.user_agent, ''), func.count(Hit.user_agent)) \
+    user_agents = db.session.query(func.coalesce(Hit.user_agent, ''), func.count()) \
                     .filter_by(url_id = url_id).group_by(Hit.user_agent).all()
 
     return jsonify(
