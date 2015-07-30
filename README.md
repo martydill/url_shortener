@@ -69,7 +69,7 @@ curl -d "url=http://code-ninja.org" http://localhost:5000/urls
   "id": 1, 
   "referrers": [
     {
-      "": 0
+      "": 12
     }
   ], 
   "short_url": "asdfz", 
