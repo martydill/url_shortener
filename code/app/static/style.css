@@ -1,0 +1,20 @@
+.fade-in-appear {
+  opacity: 0.01;
+  transition: opacity .5s ease-in;
+}
+
+.fade-in-appear.fade-in-appear-active {
+  opacity: 1;
+}
+.add-url-box {
+  margin: 20px 0;
+}
+.add-url-box input {
+  width: 100%;
+}
+
+#content {
+  width: 500px;
+  margin: 0px auto;
+  padding-top: 50px;
+}
